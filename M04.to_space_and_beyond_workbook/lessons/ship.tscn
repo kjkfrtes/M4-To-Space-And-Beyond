@@ -1,30 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4vp8u0lafnf3"]
 
-[ext_resource type="Texture2D" uid="uid://ci5b253al1tus" path="res://assets/practice_assets/ellipse_yellow.png" id="1_d1bfu"]
-[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="2_2dafo"]
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="1_2dafo"]
+[ext_resource type="Script" uid="uid://jg57xwbfv1wc" path="res://lessons/ship.gd" id="2_d6uqs"]
 
-[node name="Background" type="Node"]
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(914, 452)
+texture = ExtResource("1_2dafo")
+script = ExtResource("2_d6uqs")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" groups=["GDFExcludeVisibility"]]
-z_index = -3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.364706, 0.12549, 0.776471, 1)
-
-[node name="Ellipse" type="Sprite2D" parent="CanvasLayer"]
-top_level = true
-z_index = -1
-position = Vector2(960, 540)
-texture = ExtResource("1_d1bfu")
-
-[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
-position = Vector2(960, 540)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_2dafo")
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

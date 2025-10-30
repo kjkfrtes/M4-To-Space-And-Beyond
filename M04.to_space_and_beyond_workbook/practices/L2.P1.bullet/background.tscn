@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://vskb2dds5fig"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Texture2D" uid="uid://ci5b253al1tus" path="res://assets/practice_assets/ellipse_yellow.png" id="1_1h80u"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_yellow.png" id="1_1h80u"]
 
 [node name="Background" type="Node"]
 
@@ -24,5 +24,3 @@ texture = ExtResource("1_1h80u")
 
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
 position = Vector2(960, 540)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

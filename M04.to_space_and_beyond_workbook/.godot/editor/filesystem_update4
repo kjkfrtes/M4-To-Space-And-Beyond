@@ -1,4 +1,5 @@
-res://practices/L2.P1.bullet/bullet.tscn
+res://lessons/ship.tscn
 res://addons/gdpractice/assets/theme.tres
 res://assets/background/star_field.gdshader
 res://lessons/ship.gd
+res://practices/L3.P1.character_input/character_input.gd
